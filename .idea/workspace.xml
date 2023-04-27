@@ -5,32 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a51fc42a-4e41-4e15-a2d8-a80a37d6fb26" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.github/workflows/ci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/resources/gatling.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/resources/logback-test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/scala/Engine.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/scala/IDEPathHelper.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/scala/Recorder.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/scala/VideogameDB/Assertion.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/scala/VideogameDB/MyfirstTest.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/scala/VideogameDB/PauseExample.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/scala/VideogameDB/Reqres_fake_API.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/scala/VideogameDB/checksExample.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/scala/VideogameDB/silentRequest.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatling-maven-plugin-demo-scala-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatling-maven-plugin-demo-scala-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/gatling.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/logback-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/Engine.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/IDEPathHelper.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/Recorder.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/VideogameDB/Assertion.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/VideogameDB/MyfirstTest.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/VideogameDB/PauseExample.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/VideogameDB/Reqres_fake_API.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/VideogameDB/checksExample.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/VideogameDB/silentRequest.scala" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
     <option name="done" value="true" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,14 +68,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/Gatling/GatlingProject/Github/GatlingScala/gatling-maven-plugin-demo-scala-main/pom.xml",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Gatling/GatlingProject/Github/GatlingScala/pom.xml&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Engine">
     <configuration name="Engine" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Engine" />
