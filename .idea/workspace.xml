@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e6e9997-4d95-4385-8dff-c12010cfdaae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/scala/flightbooking/PauseExample.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/flightbooking/AssertionExample.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/videogamedb/BasicCustomFeeder.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/videogamedb/CsvFeederExample.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/videogamedb/VideoGameTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,18 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "E:/Gatling/GatlingProject/Github/GatlingScala/pom.xml"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Gatling/GatlingProject/Github/GatlingScala/pom.xml&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.Engine">
     <configuration name="Engine" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Engine" />
+      <module name="gatling-maven-plugin-demo-scala" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Recorder" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Recorder" />
       <module name="gatling-maven-plugin-demo-scala" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -63,6 +73,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Engine" />
+        <item itemvalue="Application.Recorder" />
       </list>
     </recent_temporary>
   </component>
