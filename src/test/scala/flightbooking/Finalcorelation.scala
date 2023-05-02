@@ -1,20 +1,18 @@
 package flightbooking
 
-
 import scala.concurrent.duration._
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.jdbc.Predef._
 
-class silentResources extends Simulation {
+class Finalcorelation extends Simulation {
 
   val httpProtocol = http
     .baseUrl("https://slw-flight-booker.herokuapp.com")
     .inferHtmlResources()
     .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36")
-    .silentResources // Silences all the resources
-    .silentUri(".*bookings") // Silences all the requests whose url contain 'bookings'
+    .silentResources
 
   val headers_0 = Map(
     "Accept" -> "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
@@ -48,13 +46,14 @@ class silentResources extends Simulation {
       .headers(headers_0)
       .resources(http("request_1")
         .get("/assets/application-2534172286055efef05dbb34d2da8fc2.js")
-        .headers(headers_1)
-        .notSilent))
+        .headers(headers_1))
+      .check(status.in(200, 201, 202, 304))
+      .check(status.not(404)))
     .pause(1)
     .exec(http("request_2")
       .get("/favicon.ico")
       .headers(headers_2)
-      .silent) // Silences request 'request_2'
+      .silent)
     .pause(10)
 
     .exec(http("SearchFlight")
@@ -64,11 +63,12 @@ class silentResources extends Simulation {
         .get("/assets/application-2534172286055efef05dbb34d2da8fc2.js")
         .headers(headers_1),
         http("request_5")
-          .get("/assets/application-c99cbb3caf78d16bb1482ca2e41d7a9c.css")))
+          .get("/assets/application-c99cbb3caf78d16bb1482ca2e41d7a9c.css"))
+      .check(currentLocationRegex(".*num_passengers=2.*")))
     .pause(1)
     .exec(http("request_6")
       .get("/favicon.ico")
-      .silent) // Silences request 'request_6'
+      .silent)
     .pause(10)
 
     .exec(http("SelectFlight")
@@ -78,18 +78,30 @@ class silentResources extends Simulation {
         .get("/assets/application-2534172286055efef05dbb34d2da8fc2.js")
         .headers(headers_1),
         http("request_9")
-          .get("/assets/application-c99cbb3caf78d16bb1482ca2e41d7a9c.css")))
+          .get("/assets/application-c99cbb3caf78d16bb1482ca2e41d7a9c.css"))
+      .check(css("h1:contains('Book Flight')").exists)
+      .check(substring("Email").find.exists)
+      .check(substring("Email"))
+      .check(substring("Email").count.is(2))
+      //  the response body contains an input element with name as 'authenticity_token' and  the value in it's attribute 'value'
+      .check(css("input[name='authenticity_token']", "value").saveAs("authToken"))
+      .check(bodyString.saveAs("BODY"))) // saves the complete response data into a session called "'BODY'
+    .exec { //---
+      session => //	 |
+        println(session("BODY").as[String]) //   | -- This is a session function printing out the value for virtual user session 'BODY'
+        session //   |
+    } //---
     .pause(1)
     .exec(http("request_10")
       .get("/favicon.ico")
-      .silent) // Silences request 'request_10'
+      .silent)
     .pause(10)
 
     .exec(http("BookFlight")
       .post("/bookings")
       .headers(headers_11)
       .formParam("utf8", "✓")
-      .formParam("authenticity_token", "y5BbEyinmIG2AmdPPL+tQzyFu4MpAi9oJZSA8pCGNoLGhrnXj5tRicBpFCGFOonY30qYw0egHCFoV9aAfOeaSw==")
+      .formParam("authenticity_token", "${authToken}") // Correlating 'authenticity_token' with the value received in 'authToken' [line 86]
       .formParam("booking[flight_id]", "10")
       .formParam("booking[passengers_attributes][0][name]", "Andrew")
       .formParam("booking[passengers_attributes][0][email]", "andrew654@ggmail.com")
@@ -99,7 +111,7 @@ class silentResources extends Simulation {
     .pause(1)
     .exec(http("request_12")
       .get("/favicon.ico")
-      .silent) // Silences request 'request_12'
+      .silent)
 
   setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 

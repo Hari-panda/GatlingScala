@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e6e9997-4d95-4385-8dff-c12010cfdaae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/scala/videogamedb/CheckResponseBodyAndExtract.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/body/newGameTemplate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/flightbooking/CacheCookies.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/flightbooking/Finalcorelation.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/flightbooking/ResponseChekAndFindtheDynamicvalueToken.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/videogamedb/AddPauseTime.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/videogamedb/Authenticate.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/videogamedb/CheckResponseCode.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/videogamedb/CodeReuseAndLoop.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/videogamedb/ComplexCustomFeeder.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/RestAPI/createUser.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/RestAPI/createUser.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/VideogameData/gameCsvFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/VideogameData/gameCsvFile.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/RestAPI/getUserList.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/RestAPI/getUserList.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/flightbooking/Booking.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/flightbooking/Booking.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/videogamedb/CheckResponseBodyAndExtract.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/videogamedb/CheckResponseBodyAndExtract.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

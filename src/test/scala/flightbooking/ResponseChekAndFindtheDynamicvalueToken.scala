@@ -1,20 +1,18 @@
 package flightbooking
 
-
 import scala.concurrent.duration._
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.jdbc.Predef._
 
-class silentResources extends Simulation {
+class ResponseChekAndFindtheDynamicvalueToken extends Simulation {
 
   val httpProtocol = http
     .baseUrl("https://slw-flight-booker.herokuapp.com")
     .inferHtmlResources()
     .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36")
-    .silentResources // Silences all the resources
-    .silentUri(".*bookings") // Silences all the requests whose url contain 'bookings'
+    .silentResources
 
   val headers_0 = Map(
     "Accept" -> "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
@@ -48,13 +46,14 @@ class silentResources extends Simulation {
       .headers(headers_0)
       .resources(http("request_1")
         .get("/assets/application-2534172286055efef05dbb34d2da8fc2.js")
-        .headers(headers_1)
-        .notSilent))
+        .headers(headers_1))
+      .check(status.in(200, 201, 202, 304)) // checks whether or not the status is one of the following: 200, 201, 202, 304. Fails if the status is other than these values
+      .check(status.not(404))) // checks whether or not the status is 404. Fails if the status is 404
     .pause(1)
     .exec(http("request_2")
       .get("/favicon.ico")
       .headers(headers_2)
-      .silent) // Silences request 'request_2'
+      .silent)
     .pause(10)
 
     .exec(http("SearchFlight")
@@ -64,11 +63,14 @@ class silentResources extends Simulation {
         .get("/assets/application-2534172286055efef05dbb34d2da8fc2.js")
         .headers(headers_1),
         http("request_5")
-          .get("/assets/application-c99cbb3caf78d16bb1482ca2e41d7a9c.css")))
+          .get("/assets/application-c99cbb3caf78d16bb1482ca2e41d7a9c.css"))
+      .check(currentLocationRegex(".*num_passengers=2.*")) // checks whether or not the page url contains 'num_passengers=2'. Fails if it doesn't
+      .check(bodyString.saveAs("responseBody")))
+    .exec { session => println(session("responseBody").as[String]); session } //check for the token is present or not
     .pause(1)
     .exec(http("request_6")
       .get("/favicon.ico")
-      .silent) // Silences request 'request_6'
+      .silent)
     .pause(10)
 
     .exec(http("SelectFlight")
@@ -78,11 +80,15 @@ class silentResources extends Simulation {
         .get("/assets/application-2534172286055efef05dbb34d2da8fc2.js")
         .headers(headers_1),
         http("request_9")
-          .get("/assets/application-c99cbb3caf78d16bb1482ca2e41d7a9c.css")))
+          .get("/assets/application-c99cbb3caf78d16bb1482ca2e41d7a9c.css"))
+      .check(css("h1:contains('Book Flight')").exists) // checks whether or not the heading of the page contains 'Book Flight'. Fails if it doesn't
+      .check(substring("Email").find.exists) // checks whether or not the response body contains string 'Email'. Fails if the string 'Email' doesn't exists in the response body even once.
+      .check(substring("Email")) // Shorthand method to check the same thing
+      .check(substring("Email").count.is(2))) // checks whether or not the response body contains string 'Email' exactly twice. Fails if the string 'Email' is present less than two or more than two times.
     .pause(1)
     .exec(http("request_10")
       .get("/favicon.ico")
-      .silent) // Silences request 'request_10'
+      .silent)
     .pause(10)
 
     .exec(http("BookFlight")
@@ -99,7 +105,7 @@ class silentResources extends Simulation {
     .pause(1)
     .exec(http("request_12")
       .get("/favicon.ico")
-      .silent) // Silences request 'request_12'
+      .silent)
 
   setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 
