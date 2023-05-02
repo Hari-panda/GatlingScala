@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e6e9997-4d95-4385-8dff-c12010cfdaae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/scala/computerdatabase/Blazedemo.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/RestAPI/createUser.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/RestAPI/getUserList.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/computerdatabase/RecordedSimulation.scala" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +19,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/scala/RestAPI/getUserList.scala" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
