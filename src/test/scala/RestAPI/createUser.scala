@@ -12,11 +12,12 @@ class createUser extends Simulation {
     .exec(http("crerate a new user")
     .post("/user")
     .body(
-      {
-        "name" -> "morpheus",
-        "job" ->"leader"
-      })
-    ).pause(1)
+      StringBody(""" {
+    "name": "morpheus",
+    "job": "leader"
+  }"""    )).asJson
+    )
+    .pause(1)
 
   setUp(
     scn.inject(atOnceUsers(1))
